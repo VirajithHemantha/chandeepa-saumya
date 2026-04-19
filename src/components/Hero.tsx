@@ -68,12 +68,12 @@ export const Hero: React.FC = () => {
 
             <h1 className="relative text-6xl sm:text-[7rem] lg:text-[9.5rem] font-display text-stone-800 leading-[1.1] sm:leading-[0.9] drop-shadow-sm flex flex-col items-center">
               <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
-                 <span>Pasidu</span>
+                 <span>Sandun</span>
                  <span className="text-brand-sakura-deep italic font-light text-5xl sm:text-[6rem] lg:text-[8rem] inline-block">&</span>
-                 <span>Tharuka</span>
+                 <span>Nipuni</span>
               </div>
               <div className="text-3xl sm:text-5xl lg:text-6xl font-sinhala text-stone-800 tracking-tight mt-4 sm:mt-8">
-                පසිදු <span className="text-brand-sakura-deep italic font-light mx-2">&</span> තාරුකා
+                සඳුන් <span className="text-brand-sakura-deep italic font-light mx-2">&</span> නිපුනි
               </div>
             </h1>
           </div>
@@ -98,7 +98,7 @@ export const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-white/60 to-transparent pointer-events-none" />
               <span className="relative text-[16px] sm:text-3xl font-serif text-brand-sakura-deep tracking-[0.2em] sm:tracking-[0.4em] font-medium drop-shadow-sm flex items-center gap-2 sm:gap-3 whitespace-nowrap">
                 <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-brand-sakura flex-shrink-0" />
-                21 . 05 . 2026
+                20 . 06 . 2026
                 <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-brand-sakura flex-shrink-0" />
               </span>
             </div>
@@ -110,7 +110,7 @@ export const Hero: React.FC = () => {
       <div className="absolute left-6 sm:left-10 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-6 mix-blend-multiply opacity-70">
         <div className="w-[1px] h-24 bg-gradient-to-b from-transparent to-brand-sakura-deep/50" />
         <p className="writing-mode-vertical text-[11px] uppercase tracking-[0.6em] text-brand-sakura-deep font-semibold font-sans">
-          Pubudu Villa Reception Hall • Piliyandala
+          Grand Majestic Hotel • Colombo
         </p>
         <div className="w-[1px] h-24 bg-gradient-to-t from-transparent to-brand-sakura-deep/50" />
       </div>
@@ -118,7 +118,7 @@ export const Hero: React.FC = () => {
       <div className="absolute right-6 sm:right-10 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-6 mix-blend-multiply opacity-70">
         <div className="w-[1px] h-24 bg-gradient-to-b from-transparent to-brand-sakura-deep/50" />
         <p className="writing-mode-vertical text-[11px] uppercase tracking-[0.6em] text-brand-sakura-deep font-semibold font-sans rotate-180">
-          Save the Date • May 2026
+          Save the Date • June 2026
         </p>
         <div className="w-[1px] h-24 bg-gradient-to-t from-transparent to-brand-sakura-deep/50" />
       </div>

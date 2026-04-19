@@ -3,9 +3,9 @@ import { motion } from 'motion/react';
 import { MapPin, Navigation, Compass, Map } from 'lucide-react';
 
 export const Location: React.FC = () => {
-  const venueAddress = "Pubudu Villa Reception Hall, Piliyandala, Sri Lanka";
-  const mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.56441405!2d79.9173865!3d6.8176069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25aaa8a6e6481%3A0x7c316e42db0aa2e2!2sPubudu%20Villa%20Reception%20Hall%20-%20Piliyandala!5e0!3m2!1sen!2slk!4v1712821639000!5m2!1sen!2slk`;
-  const liveLocationUrl = "https://maps.app.goo.gl/rafWY55d4oXjR4SeA";
+  const venueAddress = "Grand Majestic Hotel, Colombo, Sri Lanka";
+  const mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.78121405!2d79.8453865!3d6.9276069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25939e6a6e6481%3A0x7c316e42db0aa2e2!2sColombo!5e0!3m2!1sen!2slk!4v1712821639000!5m2!1sen!2slk`;
+  const liveLocationUrl = "https://maps.google.com/?q=Grand+Majestic+Hotel+Colombo";
 
   return (
     <div className="max-w-[85rem] mx-auto px-6 relative py-12">
@@ -45,8 +45,8 @@ export const Location: React.FC = () => {
                   <MapPin className="text-brand-sakura-deep w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-2xl font-serif text-stone-800 mb-1">Pubudu Villa Reception Hall</p>
-                  <p className="text-[11px] uppercase tracking-[0.2em] font-medium text-stone-400 leading-relaxed mb-6">Piliyandala, Sri Lanka</p>
+                  <p className="text-2xl font-serif text-stone-800 mb-1">Grand Majestic Hotel</p>
+                  <p className="text-[11px] uppercase tracking-[0.2em] font-medium text-stone-400 leading-relaxed mb-6">Colombo, Sri Lanka</p>
 
                   <p className="text-stone-500/90 italic font-serif text-lg leading-relaxed max-w-sm mb-10 pl-4 border-l-[1.5px] border-brand-sakura/40">
                     "A serene and elegant setting where we will begin our new chapter together."
@@ -85,7 +85,7 @@ export const Location: React.FC = () => {
             <div className="absolute inset-0 bg-brand-sakura/10 mix-blend-multiply pointer-events-none z-20 group-hover/map:opacity-0 transition-opacity duration-1000" />
 
             <iframe
-              title="Pubudu Villa Reception Hall Location"
+              title="Grand Majestic Hotel Location"
               src={mapUrl}
               width="100%"
               height="100%"

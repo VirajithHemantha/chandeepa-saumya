@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Music, Music2, Volume2, VolumeX } from 'lucide-react';
 import { FloatingPetals } from './components/FloatingPetals';
-import { Envelope } from './components/Envelope';
+import { IntroVideo } from './components/IntroVideo';
 import { Hero } from './components/Hero';
 import { Countdown } from './components/Countdown';
 import { CeremonyDetails } from './components/CeremonyDetails';
@@ -17,7 +17,7 @@ export default function App() {
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const weddingDate = new Date('2026-05-21T08:15:00');
+  const weddingDate = new Date('2026-06-20T10:00:00');
 
   const toggleMusic = () => {
     if (audioRef.current) {
@@ -43,7 +43,7 @@ export default function App() {
 
       <AnimatePresence mode="wait">
         {!showMain ? (
-          <Envelope key="envelope" onComplete={() => setShowMain(true)} />
+          <IntroVideo key="intro" onComplete={() => setShowMain(true)} />
         ) : (
           <motion.main
             key="main"
