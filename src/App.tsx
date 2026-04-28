@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Music, Music2, Volume2, VolumeX } from 'lucide-react';
+import { Music, Music2, Volume2, VolumeX, Heart } from 'lucide-react';
 import { FloatingPetals } from './components/FloatingPetals';
 import { IntroVideo } from './components/IntroVideo';
 import { Hero } from './components/Hero';
@@ -9,15 +9,15 @@ import { CeremonyDetails } from './components/CeremonyDetails';
 import { CoupleDetails } from './components/CoupleDetails';
 // Removed Timeline import
 import { Location } from './components/Location';
-import { RSVPForm } from './components/RSVPForm';
+// Removed RSVPForm import
 import { Footer } from './components/Footer';
 
 export default function App() {
-  const [showMain, setShowMain] = useState(false);
+  const [appState, setAppState] = useState<'landing' | 'video' | 'main'>('landing');
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const weddingDate = new Date('2026-06-20T10:00:00');
+  const weddingDate = new Date('2027-01-28T10:00:00');
 
   const toggleMusic = () => {
     if (audioRef.current) {
@@ -28,6 +28,22 @@ export default function App() {
       }
       setIsMusicPlaying(!isMusicPlaying);
     }
+  };
+
+  const startInvitation = () => {
+    setAppState('video');
+  };
+
+  const handleVideoComplete = () => {
+    setAppState('main');
+    // Auto play music after video
+    setTimeout(() => {
+      if (audioRef.current) {
+        audioRef.current.play().then(() => {
+          setIsMusicPlaying(true);
+        }).catch(err => console.log("Audio auto-play blocked: ", err));
+      }
+    }, 500);
   };
 
   return (
@@ -42,9 +58,59 @@ export default function App() {
       />
 
       <AnimatePresence mode="wait">
-        {!showMain ? (
-          <IntroVideo key="intro" onComplete={() => setShowMain(true)} />
-        ) : (
+        {appState === 'landing' && (
+          <motion.div
+            key="landing"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, scale: 1.1 }}
+            className="fixed inset-0 z-[150] bg-brand-ivory flex items-center justify-center overflow-hidden"
+          >
+            {/* Premium background for landing */}
+            <div className="absolute inset-0 opacity-40">
+               <div className="absolute top-0 right-0 w-96 h-96 bg-brand-sakura/20 blur-3xl rounded-full" />
+               <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-sakura-deep/10 blur-3xl rounded-full" />
+            </div>
+
+            <div className="relative z-10 text-center px-6">
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.5, duration: 1 }}
+                className="mb-12"
+              >
+                <div className="flex items-center justify-center gap-3 mb-6">
+                  <div className="h-[1px] w-12 bg-brand-sakura-deep/40" />
+                  <Heart className="w-5 h-5 text-brand-sakura-deep fill-brand-sakura/20" />
+                  <div className="h-[1px] w-12 bg-brand-sakura-deep/40" />
+                </div>
+                <h1 className="text-4xl sm:text-6xl font-display text-stone-800 mb-4 tracking-tight">
+                  Ayesh <span className="italic text-brand-sakura-deep">&</span> Senuri
+                </h1>
+                <p className="text-stone-500 font-serif italic text-lg sm:text-xl">You are cordially invited</p>
+              </motion.div>
+
+              <motion.button
+                onClick={startInvitation}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="group relative px-10 py-5 bg-stone-800 text-brand-champagne rounded-full overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-brand-sakura/20"
+              >
+                <div className="absolute inset-0 bg-brand-sakura-deep translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                <span className="relative z-10 font-sans tracking-[0.3em] text-xs uppercase font-bold flex items-center gap-3">
+                  View Invitation
+                  <Music className="w-4 h-4 animate-bounce" />
+                </span>
+              </motion.button>
+            </div>
+          </motion.div>
+        )}
+
+        {appState === 'video' && (
+          <IntroVideo key="intro" onComplete={handleVideoComplete} />
+        )}
+
+        {appState === 'main' && (
           <motion.main
             key="main"
             initial={{ opacity: 0 }}
@@ -105,10 +171,7 @@ export default function App() {
               <Location />
             </section>
 
-            <section id="rsvp" className="py-16 sm:py-32 bg-brand-ivory relative">
-              <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] opacity-20 pointer-events-none" />
-              <RSVPForm />
-            </section>
+
 
             <Footer />
           </motion.main>

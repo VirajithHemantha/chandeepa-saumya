@@ -17,12 +17,12 @@ export const CoupleDetails: React.FC = () => {
         >
           <div className="inline-flex items-center gap-4 mb-6 mt-4">
             <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-r from-transparent to-brand-sakura-deep/60" />
-            <span className="text-brand-sakura-deep uppercase tracking-[0.5em] text-[11px] font-semibold font-sans drop-shadow-sm">The Protagonists</span>
+            <span className="text-brand-sakura-deep uppercase tracking-[0.5em] text-[11px] font-semibold font-sans drop-shadow-sm">the happy couple</span>
             <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-l from-transparent to-brand-sakura-deep/60" />
           </div>
           <h2 className="text-5xl sm:text-7xl font-display text-stone-800 tracking-tight drop-shadow-sm flex flex-col items-center gap-4">
-            <span>Sandun <span className="italic text-brand-sakura-deep font-light mx-2">&</span> Nipuni</span>
-            <span className="text-3xl sm:text-5xl font-sinhala">සඳුන් <span className="italic text-brand-sakura-deep font-light mx-2">&</span> නිපුනි</span>
+            <span>Ayesh <span className="italic text-brand-sakura-deep font-light mx-2">&</span> Senuri</span>
+            <span className="text-3xl sm:text-5xl font-sinhala">අයේෂ් <span className="italic text-brand-sakura-deep font-light mx-2">&</span> සෙනුරි</span>
           </h2>
         </motion.div>
       </div>
@@ -37,14 +37,14 @@ export const CoupleDetails: React.FC = () => {
           className="text-center lg:text-right flex-1 lg:pr-10"
         >
           <div className="mb-4 flex flex-col items-center lg:items-end">
-            <span className="text-brand-sakura-deep uppercase tracking-[0.4em] text-[10px] font-bold mb-3 block">The Groom | මනාලයා</span>
+            <span className="text-brand-sakura-deep uppercase tracking-widest text-[10px] font-bold mb-2 block">The Groom | මනාලයා</span>
             <h3 className="text-4xl sm:text-5xl font-display text-stone-800 mb-2 drop-shadow-sm flex flex-col items-center lg:items-end gap-2">
-              <span>Sandun</span>
-              <span className="text-2xl sm:text-3xl font-sinhala">සඳුන්</span>
+              <span>Ayesh</span>
+              <span className="text-2xl sm:text-3xl font-sinhala">අයේෂ්</span>
             </h3>
-            <div className="text-stone-500/90 font-serif italic text-base sm:text-lg flex flex-col items-center lg:items-end gap-1">
-              <span>Son of Mr. & Mrs. Perera</span>
-              <span className="text-sm sm:text-base font-sinhala not-italic">පෙරේරා මහතාගේ සහ මහත්මියගේ පුතණුවන්</span>
+            <div className="text-stone-800 font-serif italic font-bold text-base sm:text-lg flex flex-col items-center lg:items-end gap-1">
+              <span>Loving son of Mr. & Mrs. Nishantha Weerasooriya</span>
+              <span className="text-sm sm:text-base font-sinhala not-italic text-center lg:text-right">නිශාන්ත වීරසූරිය මහතාගේ සහ මහත්මියගේ පුතණුවන්</span>
             </div>
           </div>
           <div className="hidden lg:flex justify-end mt-8">
@@ -74,14 +74,14 @@ export const CoupleDetails: React.FC = () => {
           className="text-center lg:text-left flex-1 lg:pl-10"
         >
           <div className="mb-4 flex flex-col items-center lg:items-start">
-            <span className="text-brand-sakura-deep uppercase tracking-[0.4em] text-[10px] font-bold mb-3 block">The Bride | මනාලිය</span>
+            <span className="text-brand-sakura-deep uppercase tracking-widest text-[10px] font-bold mb-2 block">The Bride | මනාලිය</span>
             <h3 className="text-4xl sm:text-5xl font-display text-stone-800 mb-2 drop-shadow-sm flex flex-col items-center lg:items-start gap-2">
-              <span>Nipuni</span>
-              <span className="text-2xl sm:text-3xl font-sinhala">නිපුනි</span>
+              <span>Senuri</span>
+              <span className="text-2xl sm:text-3xl font-sinhala">සෙනුරි</span>
             </h3>
-            <div className="text-stone-500/90 font-serif italic text-base sm:text-lg flex flex-col items-center lg:items-start gap-1">
-              <span>Daughter of Mr. & Mrs. Fernando</span>
-              <span className="text-sm sm:text-base font-sinhala not-italic">ප්‍රනාන්දු මහතාගේ සහ මහත්මියගේ දියණිය</span>
+            <div className="text-stone-800 font-serif italic font-bold text-base sm:text-lg flex flex-col items-center lg:items-start gap-1">
+              <span>Loving daughter of Mr. & Mrs. Siripala</span>
+              <span className="text-sm sm:text-base font-sinhala not-italic text-center lg:text-left">සිරිපාල මහතාගේ සහ මහත්මියගේ දියණිය</span>
             </div>
           </div>
           <div className="hidden lg:flex justify-start mt-8">

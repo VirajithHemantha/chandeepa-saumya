@@ -59,21 +59,21 @@ export const Hero: React.FC = () => {
           </div>
 
           <span className="text-brand-sakura-deep uppercase tracking-[0.4em] sm:tracking-[0.6em] text-xs sm:text-sm font-medium mb-6 sm:mb-10 block drop-shadow-sm font-sans">
-            The Celebration of Love | ආදරණීය විවාහ මංගල උත්සවය
+            Lovely wedding ceremony | ආදරණීය විවාහ මංගල උත්සවය
           </span>
 
           <div className="relative mb-8 sm:mb-12 w-full flex justify-center">
             {/* Soft glow behind text for contrast and magical feel */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[140%] bg-white/40 blur-[50px] sm:blur-[80px] rounded-full pointer-events-none" />
 
-            <h1 className="relative text-6xl sm:text-[7rem] lg:text-[9.5rem] font-display text-stone-800 leading-[1.1] sm:leading-[0.9] drop-shadow-sm flex flex-col items-center">
+            <h1 className="relative text-5xl sm:text-[6rem] lg:text-[8rem] font-display text-stone-800 leading-[1.1] sm:leading-[0.9] drop-shadow-sm flex flex-col items-center">
               <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
-                 <span>Sandun</span>
-                 <span className="text-brand-sakura-deep italic font-light text-5xl sm:text-[6rem] lg:text-[8rem] inline-block">&</span>
-                 <span>Nipuni</span>
+                 <span>Ayesh</span>
+                 <span className="text-brand-sakura-deep italic font-light text-4xl sm:text-[5rem] lg:text-[7rem] inline-block">&</span>
+                 <span>Senuri</span>
               </div>
               <div className="text-3xl sm:text-5xl lg:text-6xl font-sinhala text-stone-800 tracking-tight mt-4 sm:mt-8">
-                සඳුන් <span className="text-brand-sakura-deep italic font-light mx-2">&</span> නිපුනි
+                අයේෂ් <span className="text-brand-sakura-deep italic font-light mx-2">&</span> සෙනුරි
               </div>
             </h1>
           </div>
@@ -85,7 +85,7 @@ export const Hero: React.FC = () => {
                 Together with our families, we joyfully invite you to join us
               </p>
               <p className="text-lg sm:text-xl font-sinhala text-stone-600 leading-relaxed">
-                අපගේ පවුල් වල සාමාජිකයින් සමඟ එක්ව, අපගේ විවාහ මංගල උත්සවය සඳහා අප ඔබව මහත් ප්‍රීතියෙන් යුතුව පිළිගන්නෙමු.
+                අපගේ පවුල් වල සාමාජිකයින් සමඟ එක්ව, අපගේ විවාහ මංගල උත්සවය සඳහා අප ඔබව මහත් ප්‍රීතියෙන් යුතුව ආරාධනා කර සිටිනවා.
               </p>
             </div>
             <div className="hidden sm:block h-[1px] w-20 bg-gradient-to-l from-transparent to-brand-sakura-deep/40" />
@@ -94,11 +94,11 @@ export const Hero: React.FC = () => {
           {/* Enhanced Date pill with premium glass effect */}
           <div className="inline-block relative group mt-4 sm:mt-8 w-full sm:w-auto px-4 sm:px-0">
             <div className="absolute -inset-1 bg-gradient-to-r from-brand-sakura-deep/40 via-brand-sakura/40 to-brand-sakura-deep/40 rounded-full blur-[8px] opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-300 transform group-hover:scale-105" />
-            <div className="relative px-4 sm:px-12 py-3 sm:py-5 bg-white/70 backdrop-blur-lg border border-brand-sakura/50 rounded-full shadow-[0_8px_30px_rgba(251,113,133,0.15)] overflow-hidden whitespace-nowrap flex items-center justify-center">
+            <div className="relative px-6 sm:px-10 py-3 sm:py-5 bg-white/70 backdrop-blur-lg border border-brand-sakura/50 rounded-full shadow-[0_8px_30px_rgba(251,113,133,0.15)] overflow-hidden flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-b from-white/60 to-transparent pointer-events-none" />
-              <span className="relative text-[16px] sm:text-3xl font-serif text-brand-sakura-deep tracking-[0.2em] sm:tracking-[0.4em] font-medium drop-shadow-sm flex items-center gap-2 sm:gap-3 whitespace-nowrap">
+              <span className="relative text-[14px] sm:text-2xl font-serif text-brand-sakura-deep tracking-[0.15em] sm:tracking-[0.3em] font-medium drop-shadow-sm flex items-center gap-2 sm:gap-3 whitespace-nowrap">
                 <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-brand-sakura flex-shrink-0" />
-                20 . 06 . 2026
+                28 . 01 . 2027
                 <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-brand-sakura flex-shrink-0" />
               </span>
             </div>
@@ -110,7 +110,7 @@ export const Hero: React.FC = () => {
       <div className="absolute left-6 sm:left-10 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-6 mix-blend-multiply opacity-70">
         <div className="w-[1px] h-24 bg-gradient-to-b from-transparent to-brand-sakura-deep/50" />
         <p className="writing-mode-vertical text-[11px] uppercase tracking-[0.6em] text-brand-sakura-deep font-semibold font-sans">
-          Grand Majestic Hotel • Colombo
+          Green Serenity • Kurunegala
         </p>
         <div className="w-[1px] h-24 bg-gradient-to-t from-transparent to-brand-sakura-deep/50" />
       </div>
@@ -118,14 +118,14 @@ export const Hero: React.FC = () => {
       <div className="absolute right-6 sm:right-10 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-6 mix-blend-multiply opacity-70">
         <div className="w-[1px] h-24 bg-gradient-to-b from-transparent to-brand-sakura-deep/50" />
         <p className="writing-mode-vertical text-[11px] uppercase tracking-[0.6em] text-brand-sakura-deep font-semibold font-sans rotate-180">
-          Save the Date • June 2026
+          Save the Date • January 2027
         </p>
         <div className="w-[1px] h-24 bg-gradient-to-t from-transparent to-brand-sakura-deep/50" />
       </div>
 
       {/* Refined Scroll Indicator */}
       <motion.div
-        className="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 cursor-pointer"
+        className="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-4 cursor-pointer"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2.5, duration: 1 }}

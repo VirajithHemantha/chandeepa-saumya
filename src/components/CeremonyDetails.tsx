@@ -42,11 +42,11 @@ export const CeremonyDetails: React.FC = () => {
                   <Calendar className="w-5 h-5 text-brand-sakura-deep group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-2 group-hover:text-brand-sakura-deep transition-colors duration-500 flex flex-col sm:flex-row sm:items-baseline gap-2">
-                    <span>Saturday, June 20</span>
-                    <span className="text-xl sm:text-2xl font-sinhala">මැයි 20 සෙනසුරාදා</span>
+                  <h4 className="font-sans text-2xl sm:text-3xl text-stone-800 mb-2 group-hover:text-brand-sakura-deep transition-colors duration-500 flex flex-col sm:flex-row sm:items-baseline gap-2">
+                    <span>Thursday, Jan 28</span>
+                    <span className="text-xl sm:text-2xl font-sinhala">ජනවාරි 28 බ්‍රහස්පතින්දා</span>
                   </h4>
-                  <p className="text-stone-500/80 text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-bold">2026</p>
+                  <p className="text-stone-500/80 text-[14px] sm:text-[16px] uppercase tracking-[0.4em] font-bold">2027</p>
                 </div>
               </div>
 
@@ -56,11 +56,15 @@ export const CeremonyDetails: React.FC = () => {
                   <Clock className="w-5 h-5 text-brand-sakura-deep group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-2 group-hover:text-brand-sakura-deep transition-colors duration-500 flex flex-col sm:flex-row sm:items-baseline gap-2">
+                  <h4 className="font-sans text-2xl sm:text-3xl text-stone-800 mb-2 group-hover:text-brand-sakura-deep transition-colors duration-500 flex flex-col sm:flex-row sm:items-baseline gap-2">
                     <span>10:00 AM - 04:00 PM</span>
-                    <span className="text-xl sm:text-2xl font-sinhala">පෙ.ව. 10:00 - ප.ව. 04:00</span>
+                    <span className="text-xl sm:text-2xl font-sinhala">උදැසන 10:00 සිට සවස 04:00 දක්වා</span>
                   </h4>
-                  <p className="text-stone-500/80 text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-bold">Wedding Ceremony & Reception | විවාහ මංගල උත්සවය සහ දිවා භෝජනය</p>
+                  <p className="text-stone-500/80 text-[10px] sm:text-[11px] uppercase tracking-normal font-bold">Wedding Ceremony & Reception | විවාහ මංගල උත්සවය සහ දිවා භෝජනය</p>
+                  <p className="text-brand-sakura-deep text-[14px] sm:text-[16px] font-bold mt-2 flex items-center gap-2">
+                    <Sparkles className="w-4 h-4" />
+                    <span>PORUWA CEREMONY 10.05 A.M</span>
+                  </p>
                 </div>
               </div>
 
@@ -70,11 +74,11 @@ export const CeremonyDetails: React.FC = () => {
                   <MapPin className="w-5 h-5 text-brand-sakura-deep group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-2 group-hover:text-brand-sakura-deep transition-colors duration-500 flex flex-col sm:flex-row sm:items-baseline gap-2">
-                    <span>Grand Majestic Hotel</span>
-                    <span className="text-xl sm:text-2xl font-sinhala">ග්‍රෑන්ඩ් මැජෙස්ටික් හෝටලය</span>
+                  <h4 className="font-sans text-2xl sm:text-3xl text-stone-800 mb-2 group-hover:text-brand-sakura-deep transition-colors duration-500 flex flex-col sm:flex-row sm:items-baseline gap-2">
+                    <span>Green Serenity Holiday Resort</span>
+                    <span className="text-xl sm:text-2xl font-sinhala">ග්‍රීන් සෙරෙනිටි හෝලිඩේ රිසෝට්</span>
                   </h4>
-                  <p className="text-stone-500/80 text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-bold">Colombo, Sri Lanka | කොළඹ</p>
+                  <p className="text-stone-500/80 text-[10px] sm:text-[11px] uppercase tracking-normal font-bold">Elbalawa, Demataluwa, Kurunegala | කුරුණෑගල</p>
                 </div>
               </div>
             </div>
@@ -101,20 +105,12 @@ export const CeremonyDetails: React.FC = () => {
                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                />
                <h4 className="font-display text-4xl text-stone-800 mb-4 tracking-tight mt-6">The Reception</h4>
-               <p className="text-stone-500/90 font-serif text-lg leading-relaxed">
-                 Followed by a celebratory lunch and festivities at the Grand Majestic Hotel.
+               <p className="text-stone-500/90 font-sans text-lg leading-relaxed">
+                 Followed by a celebratory lunch and festivities at the Green Serenity Holiday Resort.
                </p>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: -30, y: 30 }}
-              whileInView={{ opacity: 1, x: 0, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
-              className="absolute -bottom-6 -left-6 bg-white/85 backdrop-blur-xl p-8 shadow-[0_30px_60px_rgba(251,113,133,0.15)] rounded-2xl border border-white"
-            >
-              <span className="text-brand-sakura-deep font-sans font-bold tracking-[0.2em] text-[11px] uppercase block drop-shadow-sm">Since 10:00 AM</span>
-            </motion.div>
+
 
             {/* Decorative Floating Circles */}
             <div className="absolute -top-6 -right-6 w-24 sm:w-32 h-24 sm:w-32 rounded-full border-[1.5px] border-dashed border-brand-sakura/30 animate-[spin_20s_linear_infinite]" />

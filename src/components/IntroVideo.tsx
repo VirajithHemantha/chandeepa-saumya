@@ -50,18 +50,10 @@ export const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
         autoPlay
       />
 
-      {/* Manual Start / Skip Button if Autoplay fails or for convenience */}
+      {/* Manual Start button removed as we handle interaction in App.tsx */}
       {!isStarted && !hasError && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 backdrop-blur-sm transition-opacity">
-           <motion.button
-            onClick={handleStart}
-            className="px-8 py-4 bg-brand-sakura-deep text-white rounded-full font-display text-2xl shadow-2xl hover:bg-brand-sakura transition-colors flex flex-col items-center gap-2"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span>Open Invitation</span>
-            <span className="text-xs uppercase tracking-widest font-sans opacity-80">Tap to Play</span>
-          </motion.button>
+        <div className="absolute inset-0 bg-black flex items-center justify-center">
+           <div className="w-12 h-12 border-4 border-brand-sakura-deep border-t-transparent rounded-full animate-spin" />
         </div>
       )}
 
