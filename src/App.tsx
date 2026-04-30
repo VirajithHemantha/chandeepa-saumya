@@ -9,7 +9,8 @@ import { CeremonyDetails } from './components/CeremonyDetails';
 import { CoupleDetails } from './components/CoupleDetails';
 // Removed Timeline import
 import { Location } from './components/Location';
-// Removed RSVPForm import
+import { RSVPForm } from './components/RSVPForm';
+import { WishesForm } from './components/WishesForm';
 import { Footer } from './components/Footer';
 
 export default function App() {
@@ -32,6 +33,12 @@ export default function App() {
 
   const startInvitation = () => {
     setAppState('video');
+    // Start music as soon as user interacts
+    if (audioRef.current) {
+      audioRef.current.play().then(() => {
+        setIsMusicPlaying(true);
+      }).catch(err => console.log("Audio play blocked: ", err));
+    }
   };
 
   const handleVideoComplete = () => {
@@ -172,6 +179,14 @@ export default function App() {
             </section>
 
 
+
+            <section id="rsvp" className="py-16 sm:py-32 bg-brand-ivory">
+              <RSVPForm />
+            </section>
+
+            <section id="wishes" className="py-16 sm:py-32 bg-white">
+              <WishesForm />
+            </section>
 
             <Footer />
           </motion.main>

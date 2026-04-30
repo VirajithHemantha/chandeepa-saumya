@@ -44,6 +44,7 @@ export const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
         className="w-full h-full object-cover"
         src="/Cartoon_bride_groom_202604191444.mp4"
         playsInline
+        muted
         onPlay={handlePlay}
         onEnded={onComplete}
         onError={() => setHasError(true)}
