@@ -73,7 +73,7 @@ export const Hero: React.FC = () => {
                  <span>Saumya</span>
               </div>
               <div className="text-3xl sm:text-5xl lg:text-6xl font-sinhala text-stone-800 tracking-tight mt-4 sm:mt-8">
-                චන්දීප <span className="text-brand-sakura-deep italic font-light mx-2">&</span> සෞම්‍යා
+                චංදීප <span className="text-brand-sakura-deep italic font-light mx-2">&</span> සෞම්‍යා
               </div>
             </h1>
           </div>

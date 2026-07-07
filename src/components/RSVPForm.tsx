@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { submitToGoogleSheet } from '../googleSheets';
-import { CheckCircle, Loader2, Heart, Sparkles } from 'lucide-react';
+import { CheckCircle, Loader2, Heart, Sparkles, Wine } from 'lucide-react';
 
 export const RSVPForm: React.FC = () => {
   const [formData, setFormData] = useState({
     fullName: '',
     guests: '1',
     dietaryNotes: '',
+    liquorPreference: 'Yes',
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
@@ -22,11 +23,12 @@ export const RSVPForm: React.FC = () => {
         fullName: formData.fullName,
         guests: guestValue,
         dietaryNotes: formData.dietaryNotes,
+        liquorPreference: formData.liquorPreference,
         submittedAt: new Date().toISOString(),
       });
 
       setStatus('success');
-      setFormData({ fullName: '', guests: '1', dietaryNotes: '' });
+      setFormData({ fullName: '', guests: '1', dietaryNotes: '', liquorPreference: 'Yes' });
     } catch (error) {
       console.error('Error sending RSVP to Google Sheets: ', error);
       setStatus('error');
@@ -131,6 +133,23 @@ export const RSVPForm: React.FC = () => {
                     </select>
                     <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-brand-sakura-deep transition-transform duration-300 group-hover:scale-110">
                       <Heart className="w-5 h-5 fill-brand-sakura/30 drop-shadow-sm" />
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500 mb-3 ml-2">Liquor Preference</label>
+                  <div className="relative group">
+                    <select
+                      className="w-full bg-white/80 px-6 py-4 rounded-full border border-stone-200/60 focus:ring-2 focus:ring-brand-sakura/30 focus:border-brand-sakura-deep/40 outline-none transition-all duration-300 appearance-none font-serif italic text-lg shadow-inner text-stone-700 cursor-pointer"
+                      value={formData.liquorPreference}
+                      onChange={(e) => setFormData({ ...formData, liquorPreference: e.target.value })}
+                    >
+                      <option value="Yes">Yes, please</option>
+                      <option value="No">No, thank you</option>
+                    </select>
+                    <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-brand-sakura-deep transition-transform duration-300 group-hover:scale-110">
+                      <Wine className="w-5 h-5 fill-brand-sakura/30 drop-shadow-sm" />
                     </div>
                   </div>
                 </div>

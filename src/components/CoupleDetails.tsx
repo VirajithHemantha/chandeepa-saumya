@@ -22,7 +22,7 @@ export const CoupleDetails: React.FC = () => {
           </div>
           <h2 className="text-5xl sm:text-7xl font-display text-stone-800 tracking-tight drop-shadow-sm flex flex-col items-center gap-4">
             <span>Chandeepa <span className="italic text-brand-sakura-deep font-light mx-2">&</span> Saumya</span>
-            <span className="text-3xl sm:text-5xl font-sinhala">චන්දීප <span className="italic text-brand-sakura-deep font-light mx-2">&</span> සෞම්‍යා</span>
+            <span className="text-3xl sm:text-5xl font-sinhala">චංදීප <span className="italic text-brand-sakura-deep font-light mx-2">&</span> සෞම්‍යා</span>
           </h2>
         </motion.div>
       </div>
@@ -40,7 +40,7 @@ export const CoupleDetails: React.FC = () => {
             <span className="text-brand-sakura-deep uppercase tracking-widest text-[10px] font-bold mb-2 block">The Groom | මනාලයා</span>
             <h3 className="text-4xl sm:text-5xl font-display text-stone-800 mb-2 drop-shadow-sm flex flex-col items-center lg:items-end gap-2">
               <span>Chandeepa</span>
-              <span className="text-2xl sm:text-3xl font-sinhala">චන්දීප</span>
+              <span className="text-2xl sm:text-3xl font-sinhala">චංදීප</span>
             </h3>
             <div className="text-stone-800 font-serif italic font-bold text-base sm:text-lg flex flex-col items-center lg:items-end gap-1">
               <span>Loving son of Mr. & Mrs. Somarathna</span>
