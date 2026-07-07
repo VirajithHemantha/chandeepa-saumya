@@ -94,7 +94,32 @@ export default function App() {
                 <h1 className="text-4xl sm:text-6xl font-display text-stone-800 mb-4 tracking-tight">
                   Chandeepa <span className="italic text-brand-sakura-deep">&</span> Saumya
                 </h1>
-                <p className="text-stone-500 font-serif italic text-lg sm:text-xl">You are cordially invited</p>
+                <div className="flex flex-col items-center justify-center mt-12 mb-4">
+                  {new URLSearchParams(window.location.search).get('guest') ? (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 1, duration: 1.5, ease: "easeOut" }}
+                      className="flex flex-col items-center"
+                    >
+                      <div className="flex items-center justify-center gap-4 mb-5">
+                        <div className="h-[1px] w-12 sm:w-20 bg-gradient-to-r from-transparent to-brand-sakura-deep/60" />
+                        <span className="text-stone-400 font-sans tracking-[0.3em] text-[10px] uppercase font-bold">Honored Guest</span>
+                        <div className="h-[1px] w-12 sm:w-20 bg-gradient-to-l from-transparent to-brand-sakura-deep/60" />
+                      </div>
+                      <span className="text-5xl sm:text-6xl font-display leading-tight px-4 pb-2 bg-gradient-to-r from-brand-sakura-deep via-stone-800 to-brand-sakura-deep bg-clip-text text-transparent drop-shadow-sm mb-6 text-center">
+                        {new URLSearchParams(window.location.search).get('prefix')} {new URLSearchParams(window.location.search).get('guest')}
+                      </span>
+                      <p className="text-stone-500 font-serif italic text-lg sm:text-xl">
+                        You are cordially invited
+                      </p>
+                    </motion.div>
+                  ) : (
+                    <p className="text-stone-500 font-serif italic text-lg sm:text-xl mt-6">
+                      You are cordially invited
+                    </p>
+                  )}
+                </div>
               </motion.div>
 
               <motion.button

@@ -4,8 +4,13 @@ import { submitToGoogleSheet } from '../googleSheets';
 import { CheckCircle, Loader2, Heart, Sparkles, Wine } from 'lucide-react';
 
 export const RSVPForm: React.FC = () => {
+  const searchParams = new URLSearchParams(window.location.search);
+  const guestName = searchParams.get('guest') || '';
+  const prefix = searchParams.get('prefix') || '';
+  const initialName = guestName ? `${prefix} ${guestName}`.trim() : '';
+
   const [formData, setFormData] = useState({
-    fullName: '',
+    fullName: initialName,
     guests: '1',
     dietaryNotes: '',
     liquorPreference: 'Yes',

@@ -1,4 +1,4 @@
-const SPREADSHEET_ID = '1ZxqvHizLTAPsDm3iwFd-LOw_iHXnkVxt3ch_yaX5L1I';
+const SPREADSHEET_ID = '1TO6Rg1dRVIAcJEH0VSF6uR5RtB-dgCTAMdWD3Jwy0Jg';
 const SHEET_NAMES = {
   rsvp: 'rsvp',
   wishes: 'wishes',
@@ -46,7 +46,7 @@ function ensureHeaders(sheetKey, sheet) {
   }
 
   if (sheetKey === 'rsvp') {
-    sheet.appendRow(['Timestamp', 'Full Name', 'Guests', 'Dietary Notes', 'Submitted At (ISO)']);
+    sheet.appendRow(['Timestamp', 'Full Name', 'Guests', 'Liquor Preference', 'Dietary Notes', 'Submitted At (ISO)']);
     return;
   }
 
@@ -64,6 +64,7 @@ function buildRow(sheetKey, payload) {
       now,
       sanitize(payload.fullName),
       isNaN(payload.guests) ? sanitize(payload.guests) : Number(payload.guests || 1),
+      sanitize(payload.liquorPreference),
       sanitize(payload.dietaryNotes),
       sanitize(payload.submittedAt),
     ];

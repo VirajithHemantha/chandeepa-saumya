@@ -4,8 +4,13 @@ import { submitToGoogleSheet } from '../googleSheets';
 import { CheckCircle, Loader2, MessageSquare, Sparkles } from 'lucide-react';
 
 export const WishesForm: React.FC = () => {
+  const searchParams = new URLSearchParams(window.location.search);
+  const guestName = searchParams.get('guest') || '';
+  const prefix = searchParams.get('prefix') || '';
+  const initialName = guestName ? `${prefix} ${guestName}`.trim() : '';
+
   const [formData, setFormData] = useState({
-    name: '',
+    name: initialName,
     message: '',
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
